@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GenericAlertDialogLibrary</string>
+    <string name="message">Message</string>
+    <string name="neutral">Cancel</string>
+    <string name="positive">Tamam</string>
+    <string name="negative">Hayır</string>
+    <string name="title">Title</string>
+    <string name="warning">Uyarı</string>
+</resources>

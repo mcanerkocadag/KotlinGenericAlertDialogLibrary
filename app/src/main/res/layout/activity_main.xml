@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/defaultBtn_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Default ALERT DIALOG"
+            app:layout_constraintBottom_toTopOf="@+id/oneaction_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/oneaction_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="63dp"
+            android:text="ONE ACTION ALERT DIALOG"
+            app:layout_constraintBottom_toTopOf="@+id/twoaction_btn"
+            app:layout_constraintEnd_toEndOf="@+id/defaultBtn_btn"
+            app:layout_constraintStart_toStartOf="@+id/defaultBtn_btn"
+            app:layout_constraintTop_toBottomOf="@+id/defaultBtn_btn" />
+
+        <Button
+            android:id="@+id/twoaction_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:text="TWO ACTION ALERT DIALOG"
+            app:layout_constraintBottom_toTopOf="@+id/threeaction_btn"
+            app:layout_constraintEnd_toEndOf="@+id/oneaction_btn"
+            app:layout_constraintStart_toStartOf="@+id/oneaction_btn"
+            app:layout_constraintTop_toBottomOf="@+id/oneaction_btn" />
+
+        <Button
+            android:id="@+id/threeaction_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="63dp"
+            android:text="THREE ACTION ALERT DIALOG"
+            app:layout_constraintBottom_toTopOf="@+id/action_click_btn"
+            app:layout_constraintEnd_toEndOf="@+id/twoaction_btn"
+            app:layout_constraintStart_toStartOf="@+id/twoaction_btn"
+            app:layout_constraintTop_toBottomOf="@+id/twoaction_btn" />
+
+        <Button
+            android:id="@+id/action_click_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:text="LISTENER ALERT DIALOG"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/twoaction_btn"
+            app:layout_constraintStart_toStartOf="@+id/twoaction_btn"
+            app:layout_constraintTop_toBottomOf="@+id/threeaction_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
