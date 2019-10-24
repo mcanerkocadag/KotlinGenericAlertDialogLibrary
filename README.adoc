@@ -15,7 +15,7 @@
 === Step 2: add the dependency
 
   dependencies {
-	        implementation 'com.github.mcanerkocadag:KotlinGenericAlertDialogLibrary:Tag'
+	         implementation 'com.github.mcanerkocadag:KotlinGenericAlertDialogLibrary:0.1.1'
 	}
 	
 === Step 3: Show Alert Dialog
@@ -24,10 +24,10 @@
 
 ==== Message , Ok Button Text , No Button Text , Cancel Button Text , Title
 
-Example 1::
+=== Example 1
   GenericAlertDialog.show(this, AlertStatus.ONEACTION, "Welcome")
 	
-Example 2::
+=== Example 2
  GenericAlertDialog.show(
                 this,
                 AlertStatus.TWOACTION,
@@ -36,9 +36,10 @@ Example 2::
                 "Ok Button",
                 "No Button"
             )
-            
- Example 3::
- GenericAlertDialog.show(
+        
+	
+=== Example 3
+  GenericAlertDialog.show(
                 this,
                 AlertStatus.THREEACTION,
                 null,
@@ -48,8 +49,9 @@ Example 2::
                 "Cancel Button"
             )
             
- Listeners Example 4 ::
- GenericAlertDialog.show(
+	    
+=== Listeners Example 4
+  GenericAlertDialog.show(
                 this,
                 AlertStatus.THREEACTION,
                 object : GenericAlertDialog.Companion.DialogListener {
@@ -64,12 +66,36 @@ Example 2::
                 "Cancel Button"
             )
             
-  GenericAlertDialog has Three Listener functions. These;::
-  
-  You can override and use whatever you want.
-  fun onPositiveButton(dialog: AlertDialog)
-  fun onNegativeButton(create: AlertDialog)
-  fun onNeutralButton(create: AlertDialog)
+=== Listeners Example 5
+  GenericAlertDialog.show(
+                this,
+                AlertStatus.THREEACTION,
+                object : GenericAlertDialog.Companion.DialogListener {
+                    override fun onPositiveButton(dialog: AlertDialog) {
+                        Toast.makeText(this@MainActivity, "Ok button click !", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                    override fun onNegativeButton(create: AlertDialog) {
+                        Toast.makeText(this@MainActivity, "Negative button click !", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                    override fun onNeutralButton(create: AlertDialog) {
+                        Toast.makeText(this@MainActivity, "Neutral button click !", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                },
+                "Welcome",
+                "Ok Button",
+                "No Button",
+                "Cancel Button",
+                "Warning"
+            )
+	    
+    GenericAlertDialog has Three Listener functions. These;::
+    You can override and use whatever you want.
+    fun onPositiveButton(dialog: AlertDialog)::
+    fun onNegativeButton(create: AlertDialog)::
+    fun onNeutralButton(create: AlertDialog)::
   
                
 
