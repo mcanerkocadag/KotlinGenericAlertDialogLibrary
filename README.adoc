@@ -1,0 +1,76 @@
+# KOTLIN GENERIC ALERT DIALOG
+
+== Kotlin Suppport
+
+=== Step 1: Add it in your root build.gradle at the end of repositories:
+
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+	
+=== Step 2: add the dependency
+
+  dependencies {
+	        implementation 'com.github.mcanerkocadag:KotlinGenericAlertDialogLibrary:Tag'
+	}
+	
+=== Step 3: Show Alert Dialog
+
+=== GenericAlertDialog last paramaters respectively:
+
+==== Message , Ok Button Text , No Button Text , Cancel Button Text , Title
+
+Example 1::
+  GenericAlertDialog.show(this, AlertStatus.ONEACTION, "Welcome")
+	
+Example 2::
+ GenericAlertDialog.show(
+                this,
+                AlertStatus.TWOACTION,
+                null,
+                "Welcome",
+                "Ok Button",
+                "No Button"
+            )
+            
+ Example 3::
+ GenericAlertDialog.show(
+                this,
+                AlertStatus.THREEACTION,
+                null,
+                "Welcome",
+                "Ok Button",
+                "No Button",
+                "Cancel Button"
+            )
+            
+ Listeners Example 4 ::
+ GenericAlertDialog.show(
+                this,
+                AlertStatus.THREEACTION,
+                object : GenericAlertDialog.Companion.DialogListener {
+                    override fun onPositiveButton(dialog: AlertDialog) {
+                        Toast.makeText(this@MainActivity, "Ok button click !", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                },
+                "Welcome",
+                "Ok Button",
+                "No Button",
+                "Cancel Button"
+            )
+            
+  GenericAlertDialog has Three Listener functions. These;::
+  
+  You can override and use whatever you want.
+  fun onPositiveButton(dialog: AlertDialog)
+  fun onNegativeButton(create: AlertDialog)
+  fun onNeutralButton(create: AlertDialog)
+  
+               
+
+You can examine the sample project.:: 
